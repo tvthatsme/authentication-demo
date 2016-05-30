@@ -1,0 +1,26 @@
+<h1>Register</h1>
+<h3>Create an account and get started today.</h3>
+
+<form>
+  Forename*
+  <input type="text" ng-model="user.forename" placeholder="Forename" />
+  <br/>
+  Surname*
+  <input type="text" ng-model="user.surname" placeholder="Surname" />
+  <br/>
+  Sex*
+  <input type="text" ng-model="user.sex" />
+  <br/>
+  Date of birth
+  <input type="text" ng-model="user.birthdate" />
+  </br>
+  Email Address*
+  <input type="text" ng-model="user.email" placeholder="Email address" />
+  <br/>
+  <input type="text" ng-model="user.emailConfirm" placeholder="Verify Email address" />
+  <br/>
+  <input type="text" ng-model="user.password" placeholder="Password">
+  <input type="checkbox" ng-model="user.showPassword" />
+  <p>Use between 7 - 25 characters. At least one uppercase character. At least one number.</p>  
+  <input type="button" ng-click="register()" value="Register" />
+</form>
