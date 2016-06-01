@@ -1,37 +1,41 @@
-
-<div>
-
+<div class="actionCall">
+  <h1>Register</h1>
+  <h3>Create an account and get started today.</h3>
 </div>
-<h1>Register</h1>
-<h3>Create an account and get started today.</h3>
-
 <div ng-controller='RegisterCtrl'>
+  <div class="alert">
+    <b>Oh snap!</b> Looks like you need to adjust a few things.
+    <a href="#">Go to first error</a>
+  </div>
   <div>
     <form>
-      Forename*
+      <p>Forename*</p>
       <input type="text" ng-model="user.forename" placeholder="Forename" />
-      <br/>
-      Surname*
+      
+      <p>Surname*</p>
       <input type="text" ng-model="user.surname" placeholder="Surname" />
-      <br/>
-      Sex*
+      
+      <p>Sex*</p>
       <input type="text" ng-model="user.sex" />
-      <br/>
-      Date of birth
+      
+      <p>Date of birth</p>
       <input type="text" ng-model="user.birthdate" />
-      </br>
-      Email Address*
+      
+      <p>Email Address*</p>
       <input type="text" ng-model="user.email" placeholder="Email address" />
       <br/>
+      
+      <p>Verify Email Address*</p>
       <input type="text" ng-model="user.emailConfirm" placeholder="Verify Email address" />
-      <br/>
+      
+      <p>Password*</p>
       <input type="text" ng-model="user.password" placeholder="Password">
       <input type="checkbox" ng-model="user.showPassword" />
-      <p>Use between 7 - 25 characters. At least one uppercase character. At least one number.</p>  
+      Use between 7 - 25 characters. At least one uppercase character. At least one number.
       <input type="button" ng-click="register()" value="Register" />
     </form>
   </div>
-  <div>
+  <div class="formAlternate">
     <h2>Already a member?</h2>
     <a class="button" href="#/login">Login</a>
   </div>
