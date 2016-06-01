@@ -154,13 +154,6 @@ form {
 //  background-color: #FAFAFA;
 //}
 
-.header {
-  @include fitContent {
-    height: 100px;
-    background-color: #F2F2F2;
-    padding-left: 20px;
-  }
-}
 
 .footer {
   @include fitContent {
@@ -194,6 +187,66 @@ form {
   }
 }
 
+// Style the navigation bar on the top of the screen
+.header {
+  @include fitContent {
+    height: 85px;
+    background-color: #F2F2F2;
+  }
+}
+
+.navigation {
+  height: 50px;
+  padding: 0;
+  background-color: #EBEBEB;
+  .logoArea {
+    float: left;
+    width: 70px;
+    height: 100%;
+    background-color: #9E9D9D;
+  }
+  .navigationButton {
+    height: 100%;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+.subNavigation {
+  padding: 0.5rem;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  a {
+    color: #3498DB;
+  }
+}
+
+// Float a nav item right and give it size
+.rightNav {
+  float: right;
+  width: 100px;
+  &.lighter {
+    background-color: #BFBDBD;
+  }
+  &.darker {
+    background-color: #737272;
+  }
+}
+
+// Float a nav item left and give it size
+.leftNav {
+  float: left;
+  width: 130px;
+}
+
+// Browse happy style
+///////////////////////////////////////////////////////////////////////////////
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
