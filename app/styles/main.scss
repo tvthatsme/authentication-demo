@@ -8,6 +8,9 @@ $gray-primary: #474747;
 $gray-primary-hover: #9E9D9D;
 $gray-secondary: #E6E6E6;
 
+$red: #D71921;
+$red-background: #F9E6E6;
+
 // Fit the content to the bounds of the application
 @mixin fitContent {
   position: relative;
@@ -57,21 +60,32 @@ h1 {
   margin-bottom: .5rem;
 }
 
+h2 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
 h3 {
   font-weight: 400;
 }
 
-button {
+a.button {
   @include buttonMix {
-    background-color: #9E9D9D;
+    background-color: #D9D9D9;
   }
+  width: 200px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
 }
 
 form {
+//  position: relative;
   float: left;
-  width: 100%;
   background-color: #F2F2F2;
-  max-width: 600px;
+  width: 600px;
   padding-left: 25px;
   padding-right: 35px;
   padding-bottom: 20px;
@@ -84,7 +98,7 @@ form {
   a {
     display: block;
     margin-top: 8px;
-    font-size: .7rem;
+    font-size: .8rem;
     font-weight: 300;
     color: $gray-primary;
   }
@@ -114,6 +128,7 @@ form {
 }
 
 .formAlternate {
+  text-align: center;
 }
 
 // Container holds every part of the app except header and footer
@@ -128,11 +143,13 @@ form {
   margin-bottom: 40px;
 }
 
-.content {
-  position: relative;
-  width: 100%;
-  background-color: #FAFAFA;
-}
+//.content {
+////  position: relative;
+//  margin: -15px;
+//  padding: 15px;
+//  width: 100%;
+//  background-color: #FAFAFA;
+//}
 
 .header {
   @include fitContent {
@@ -146,6 +163,31 @@ form {
   @include fitContent {
     height: 120px;
     background-color: #5E5E5E;
+  }
+}
+
+.alert {
+  float: left;
+  width: 100%;
+  height: 60px;
+  padding: 1.3rem;
+  margin-bottom: 15px;
+  margin-top: -25px;
+  border: 1px solid $red;
+  border-radius: 5px;
+  color: $red;
+  font-size: .9rem;
+  background-color: $red-background;
+  a {
+    color: $red;
+  }
+  &:after {
+    content: "X";
+    color: #000000;
+    float: right;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-top: -3px;
   }
 }
 
@@ -168,4 +210,14 @@ form {
   .footer {
     margin-left: 0px;
   }
+}
+
+// Screen size is less than 420px wide
+@media screen and (max-width: 420px) {
+  form {
+    padding: 10px;
+  }
+//  form.input[type=button] {
+//    width: 100%;
+//  }
 }

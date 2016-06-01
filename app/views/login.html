@@ -2,14 +2,28 @@
   <h1>Login</h1>
   <h3>Access your account</h3>
 </div>
-<div ng-controller='LoginCtrl' class="content">
-  <div>
-    <form>
+<div ng-controller='LoginCtrl'>
+  <div class="alert">
+    <b>Oh snap!</b> Looks like you need to adjust a few things.
+    <a href="#">Go to first error</a>
+  </div>
+  <div class="content">
+    <form name="loginForm" novalidate>
       <p>Username*</p>
-      <input type="text" ng-model="user.username" placeholder="Username" />
+      <input type="text" ng-model="user.username" name="uName" required="" placeholder="Username" />
+<!--
+      <div ng-show="loginForm.$submitted || loginForm.uName.$touched">
+        <div ng-show="form.uName.$error.required">Please enter this information</div>
+      </div>
+-->
       <br/>
       <p>Password*</p>
-      <input type="text" ng-model="user.password" placeholder="Password" />
+      <input type="text" ng-model="user.password" name="uPass" required="" placeholder="Password" />
+<!--
+      <div ng-show="loginForm.$submitted || loginForm.uPass.$touched">
+        <div ng-show="form.uPass.$error.required">Please enter this information</div>
+      </div>
+-->
       <a href="#">Forgot password?</a>
       <input type="button" ng-click="login()" value="Login" />
     </form>
