@@ -18,6 +18,6 @@ Monday, 30 May 2016
 Initial setup of application header, footer, login, and register components.
 
 Tuesday, 31, May 2016
-3 Hours, 10 Minutes
+4 Hours, 10 Minutes
 (thru commit 62b5d112ae8f733bbb4e5192abf6cf6ed318ed35)
 Responsive styling of application components. Basic hyperlink and navigation support throughout application.
