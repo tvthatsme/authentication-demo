@@ -85,7 +85,6 @@ a.button {
 }
 
 form {
-//  position: relative;
   float: left;
   background-color: #F2F2F2;
   width: 600px;
@@ -94,6 +93,7 @@ form {
   padding-bottom: 20px;
   font-weight: 600;
   font-size: .9rem;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
   p {
     margin-top: 20px;
     margin-bottom: 5px;
@@ -137,22 +137,26 @@ form {
 // Container holds every part of the app except header and footer
 .container {
   @include fitContent {
-    padding: 30px;
+    padding: 20px;
     background-color: $white;
   }
 }
 
 .actionCall {
   margin-bottom: 40px;
+  padding: 15px;
 }
 
-//.content {
-////  position: relative;
-//  margin: -15px;
-//  padding: 15px;
-//  width: 100%;
-//  background-color: #FAFAFA;
-//}
+.content {
+  position: relative;
+  // Content was not taking height at all.
+  // http://stackoverflow.com/questions/1709442/make-divs-height-expand-with-its-content
+  display: table;
+  width: 100%;
+  padding: 15px;
+  padding-bottom: 20px;
+  background-color: #FAFAFA;
+}
 
 
 .footer {
