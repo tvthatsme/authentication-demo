@@ -3,11 +3,9 @@
 
 $white: #FFFFFF;
 $white-offWhite: #FDFDFD;
-
 $gray-primary: #474747;
 $gray-primary-hover: #9E9D9D;
 $gray-secondary: #E6E6E6;
-
 $red: #D71921;
 $red-background: #F9E6E6;
 
@@ -84,6 +82,8 @@ a.button {
   }
 }
 
+// Define the form styling
+///////////////////////////////////////////////////////////////////////////////
 form {
   float: left;
   background-color: #F2F2F2;
@@ -131,10 +131,16 @@ form {
 }
 
 .formAlternate {
+  position: absolute;
+  height: 80px;
+  top: calc(50% - 40px);
+  right: 15px;  // Account for the content padding
+  width: calc(100% - 645px);
   text-align: center;
 }
 
 // Container holds every part of the app except header and footer
+///////////////////////////////////////////////////////////////////////////////
 .container {
   @include fitContent {
     padding: 20px;
@@ -159,13 +165,10 @@ form {
 }
 
 
-.footer {
-  @include fitContent {
-    height: 110px;
-    background-color: #5E5E5E;
-  }
-}
 
+
+// Define the styling for alert bar
+///////////////////////////////////////////////////////////////////////////////
 .alert {
   position: relative;
   float: left;
@@ -203,6 +206,18 @@ form {
   }
 }
 
+// Footer styling
+///////////////////////////////////////////////////////////////////////////////
+.footer {
+  @include fitContent {
+    height: 110px;
+    margin-top: 70px;
+    background-color: #5E5E5E;
+  }
+}
+
+// Navigation bar styling
+///////////////////////////////////////////////////////////////////////////////
 .navigation {
   height: 50px;
   padding: 0;
@@ -284,6 +299,17 @@ form {
   }
 }
 
+@media screen and (max-width: 910px) {
+  .formAlternate {
+    position: relative;
+    float: left;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    padding: 35px;
+  }
+}
+
 // Screen size is less than 650px wide
 @media screen and (max-width: 650px) {
   h1 {
@@ -305,7 +331,15 @@ form {
     }
   }
   .container {
-    padding: 20px;
+    width: 100%;
+    padding: 0;
+  }
+  .actionCall {
+    padding: 22px;
+  }
+  .content {
+    width: 100%;
+    padding: 12px;
   }
   .navigationButton {
     display: none;
