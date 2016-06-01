@@ -1,19 +1,20 @@
-<div>
+<div class="actionCall">
   <h1>Login</h1>
-  <h3>Access your account.</h3>
+  <h3>Access your account</h3>
 </div>
-<div ng-controller='LoginCtrl'>
+<div ng-controller='LoginCtrl' class="content">
   <div>
     <form>
-      Username*
+      <p>Username*</p>
       <input type="text" ng-model="user.username" placeholder="Username" />
       <br/>
-      Password*
+      <p>Password*</p>
       <input type="text" ng-model="user.password" placeholder="Password" />
+      <a href="#">Forgot password?</a>
       <input type="button" ng-click="login()" value="Login" />
     </form>
   </div>
-  <div>
+  <div class="formAlternate">
     <h2>Not a member?</h2>
     <button href="/register">Register today</button>
   </div>

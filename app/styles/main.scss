@@ -1,6 +1,154 @@
 // bower:scss
 // endbower
 
+$white: #FFFFFF;
+$white-offWhite: #FDFDFD;
+
+$gray-primary: #474747;
+$gray-primary-hover: #9E9D9D;
+$gray-secondary: #E6E6E6;
+
+// Fit the content to the bounds of the application
+@mixin fitContent {
+  position: relative;
+  float: left;
+  width: 100%;
+  max-width: 1024px;
+  margin-left: calc(50% - 512px);
+  @content;
+}
+
+// Button mixin
+@mixin buttonMix {
+  height: 40px;
+  width: 160px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 3px;
+  &:hover {
+    cursor: pointer;
+  }
+  @content;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+  background-color: $white-offWhite;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+button {
+  @include buttonMix {
+    background-color: #9E9D9D;
+  }
+}
+
+form {
+  float: left;
+  width: 100%;
+  background-color: #F2F2F2;
+  max-width: 600px;
+  padding-left: 25px;
+  padding-right: 35px;
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: .9rem;
+  p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  a {
+    display: block;
+    margin-top: 8px;
+    font-size: .7rem;
+    font-weight: 300;
+    color: $gray-primary;
+  }
+  input {
+    width: 100%;
+    height: 2rem;
+    padding: .25rem;
+    background-color: $white;
+    border: 1px solid $gray-primary-hover;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    &:placeholder-shown {
+      font-style: italic;
+    }
+  }
+  input[type=button] {
+    @include buttonMix {
+      float: right;
+      color: $white;
+      background-color: $gray-primary;
+      margin-right: -10px;
+      &:hover {
+        background-color: $gray-primary-hover;
+      }
+    }
+  }
+}
+
+.formAlternate {
+}
+
+// Container holds every part of the app except header and footer
+.container {
+  @include fitContent {
+    padding: 30px;
+    background-color: $white;
+  }
+}
+
+.actionCall {
+  margin-bottom: 40px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  background-color: #FAFAFA;
+}
+
+.header {
+  @include fitContent {
+    height: 100px;
+    background-color: #F2F2F2;
+    padding-left: 20px;
+  }
+}
+
+.footer {
+  @include fitContent {
+    height: 120px;
+    background-color: #5E5E5E;
+  }
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -8,82 +156,16 @@
   padding: 0.2em 0;
 }
 
-body {
-  padding: 0;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
+// The container should max out at 1000px and take the whole screen if the
+// size is less than that
+@media screen and (max-width: 1024px) {
   .header {
-    margin-bottom: 30px;
+    margin-left: 0px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  .container {
+    margin-left: 0px;
+  }
+  .footer {
+    margin-left: 0px;
   }
 }
