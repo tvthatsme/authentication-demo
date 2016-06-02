@@ -47,3 +47,9 @@ Tuesday, 31, May 2016
 Wednesday, 01 June 2016
 * 2 Hours, 30 Minutes (thru commit 515843af81efb839dc6fd23b212c6912d442b2b0)
 * Finished responsive styling. Added form validation styling and basic controls.
+
+
+  [1]: https://www.ruby-lang.org/en/documentation/installation/
+  [2]: http://compass-style.org/install/
+  [3]: https://nodejs.org/en/
+  [4]: http://git-scm.com/
