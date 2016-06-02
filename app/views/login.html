@@ -3,30 +3,36 @@
   <h3>Access your account.</h3>
 </div>
 <div ng-controller='LoginCtrl'>
-  <div class="alert">
+  <!-- Alert the user if there is a problem filling out the form -->
+  <div ng-show="loginForm.$invalid && loginForm.$touched" class="alert">
     <b>Oh snap!</b> Looks like you need to adjust a few things.
     <a href="#">Go to first error</a>
   </div>
+  
+  <!-- Login content -->
   <div class="content">
     <form name="loginForm" novalidate>
-      <p>Username*</p>
-      <input type="text" ng-model="user.username" name="uName" required="" placeholder="Username" />
-<!--
-      <div ng-show="loginForm.$submitted || loginForm.uName.$touched">
-        <div ng-show="form.uName.$error.required">Please enter this information</div>
-      </div>
--->
-      <br/>
+      
+      <!-- Username input -->
+      <p class="title">Username*</p>
+      <input type="text" ng-model="username" name="uName" required placeholder="Username" ng-maxlength="{{ usernameInputMax }}" />
+      <p class="alertText" ng-show="loginForm.uName.$invalid && loginForm.uName.$touched">
+        Please enter this information
+      </p>
+      
+      <!-- Password input -->
       <p>Password*</p>
-      <input type="text" ng-model="user.password" name="uPass" required="" placeholder="Password" />
-<!--
-      <div ng-show="loginForm.$submitted || loginForm.uPass.$touched">
-        <div ng-show="form.uPass.$error.required">Please enter this information</div>
-      </div>
--->
+      <input type="password" ng-model="password" name="uPass" required="" placeholder="Password" ng-minlength="{{ passwordInputMin }}" ng-maxlength="{{ passwordInputMax }}" />
+      <p class="alertText" ng-show="loginForm.uPass.$invalid && loginForm.uPass.$touched">
+        Please enter this information
+      </p>
       <a href="#">Forgot password?</a>
+      
+      <!-- Submit the login request -->
       <input type="button" ng-click="login()" value="Login" />
     </form>
+    
+    <!-- Let the user know that they have the option to register as well -->
     <div class="formAlternate">
       <h2>Not a member?</h2>
       <a class="button" href="#/register">Register today</a>
