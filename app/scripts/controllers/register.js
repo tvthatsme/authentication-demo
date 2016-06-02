@@ -8,10 +8,8 @@
  * Controller of the authenticationDemoApp
  */
 angular.module('authenticationDemoApp')
-  .controller('RegisterCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('RegisterCtrl', ['$scope', function ($scope) {
+    
+    // Define the maximum number of characters for a forename or surname
+    $scope.nameInputMax = 100;
+  }]);
