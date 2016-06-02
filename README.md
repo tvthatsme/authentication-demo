@@ -36,27 +36,14 @@ Running `grunt test` will run the unit tests with karma.
 ## Time spent
 
 Monday, 30 May 2016
-
-1 Hour, 20 Minutes 
-
-(thru commit 438e22779218f2772a5adbe268870f3df1d16e39)
-
-Initial setup of application header, footer, login, and register components.
+* 1 Hour, 20 Minutes (thru commit 438e22779218f2772a5adbe268870f3df1d16e39)
+* Initial setup of application header, footer, login, and register components.
 
 
 Tuesday, 31, May 2016
-
-4 Hours, 10 Minutes
-
-(thru commit 62b5d112ae8f733bbb4e5192abf6cf6ed318ed35)
-
-Responsive styling of application components. Basic hyperlink and navigation support throughout application.
-
+* 4 Hours, 10 Minutes (thru commit 62b5d112ae8f733bbb4e5192abf6cf6ed318ed35)
+* Responsive styling of application components. Basic hyperlink and navigation support throughout application.
 
 Wednesday, 01 June 2016
-
-2 Hours, 30 Minutes
-
-(thru commit 515843af81efb839dc6fd23b212c6912d442b2b0)
-
-Finished responsive styling. Added form validation styling and basic controls.
+* 2 Hours, 30 Minutes (thru commit 515843af81efb839dc6fd23b212c6912d442b2b0)
+* Finished responsive styling. Added form validation styling and basic controls.
