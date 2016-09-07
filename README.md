@@ -15,7 +15,7 @@ npm install -g bower
 
 Get the repository from GitHub.
 ```
-git clone https://github.com/tvthatsme/asciiShapes.git
+git clone https://github.com/tvthatsme/authentication-demo.git
 ```
 
 
